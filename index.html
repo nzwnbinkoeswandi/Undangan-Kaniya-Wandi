@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f7f2ee;
+            color: #4b3427;
+        }
+        
+        section {
+            position: relative;
+            overflow: hidden;
+            padding: 65px 20px;
+            z-index: 1;
+        }
+        
+        img,
+        button,
+        a,
+        .couple-card,
+        .event-card,
+        .gift-card {
+            transition: all .3s ease;
+        }
+        
+        .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #ffffff;
+            line-height: 1;
+        }
+        
+        .subtitle {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #ffffff;
+        }
+        
+        p {
+            line-height: 1.5;
+        }
+        /* HERO */
+        
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('backroundbunga.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h4 {
+            letter-spacing: 4px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 6rem;
+            margin-bottom: -8px;
+            line-height: 0.9;
+        }
+        
+        .hero p {
+            margin-top: 15px;
+            margin-bottom: 30px;
+            font-size: 17px;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            background: white;
+            color: #9b5e3d;
+            font-weight: 600;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-4px);
+        }
+        /* BACKGROUND SECTION */
+        
+        .couple-section,
+        .surah-section {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('backroundbunga.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .wish-section {
+            background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .0)), url('bgbungaputih.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .gift-section {
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('backroundbunga.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .gallery-section {
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('backroundbunga.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .event-section {
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('backroundbunga.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* COUPLE */
+        
+        .couple-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .couple {
+            width: 200px;
+            background: #ffffff;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+        }
+        
+        .couple-card:hover {
+            transform: translateY(-6px);
+        }
+        
+        .couple img {
+            width: 110%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            border-color: #fff8f3;
+        }
+        
+        .couple-content {
+            padding: 30px 22px;
+            text-align: center;
+        }
+        
+        .couple-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1;
+            white-space: nowrap;
+        }
+        
+        .couple-content p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        /* SURAH */
+        
+        .surah-card {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        }
+        
+        .surah-card img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .surah-content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .surah-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+            color: #9b5e3d;
+        }
+        
+        .arabic {
+            font-size: 2rem;
+            line-height: 2;
+            margin-bottom: 20px;
+            color: #5c4033;
+        }
+        
+        .arti {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.7;
+            color: #6b4d3d;
+        }
+        /* EVENT */
+        
+        .event-wrapper {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 45px;
+            text-emphasis-color: white;
+        }
+        
+        .event-card {
+            width: 350px;
+            background: #f7f2ee;
+            color: #4b3427;
+            border-radius: 30px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+        
+        .event-card:hover {
+            transform: translateY(-6px);
+        }
+        
+        .event-card i {
+            font-size: 42px;
+            color: #9b5e3d;
+            margin-bottom: 16px;
+        }
+        
+        .event-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            color: #5c4033;
+        }
+        
+        .event-card h2 {
+            font-size: 22px;
+            margin: 14px 0 10px;
+            color: #5c4033;
+        }
+        
+        .event-card p {
+            line-height: 1.5;
+            color: #6b4d3d;
+            margin-bottom: 8px;
+        }
+        
+        .maps-btn {
+            margin-top: 18px;
+            background: #9b5e3d;
+            color: white;
+        }
+        /* GALLERY */
+        
+        .gallery-grid {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+            max-width: 1200px;
+            margin-inline: auto;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 22px;
+            display: block;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+        }
+        /* GIFT */
+        
+        .gift-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 45px;
+        }
+        
+        .gift-card {
+            width: 420px;
+            background: #f7f2ee;
+            color: #4b3427;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        }
+        
+        .gift-card:hover {
+            transform: translateY(-6px);
+        }
+        
+        .bank-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            gap: 16px;
+        }
+        
+        .bank-header h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: #9b5e3d;
+        }
+        
+        .bank-logo {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+        
+        .rekening {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 14px 0;
+            color: #9b5e3d;
+            word-break: break-word;
+        }
+        
+        .copy-btn {
+            width: 100%;
+            margin-top: 18px;
+            background: #9b5e3d;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 18px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        
+        .copy-btn:hover {
+            background: #7e4b2f;
+        }
+        /* FOOTER */
+        
+        footer {
+            background: #3b2a22;
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+        }
+        
+        footer h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        footer p {
+            line-height: 1.5;
+        }
+        /* MOBILE */
+        
+        @media(max-width:768px) {
+            section {
+                padding: 55px 18px;
+            }
+            .hero h1,
+            .title {
+                font-size: 3.1rem;
+                letter-spacing: 2px;
+            }
+            .hero h1 {
+                line-height: 0.9;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .surah-card img {
+                height: 280px;
+            }
+            .arabic {
+                font-size: 1.4rem;
+                line-height: 1.8;
+            }
+            .event-card,
+            .gift-card,
+            .couple-card {
+                width: 100%;
+            }
+            .gallery-grid img {
+                height: 320px;
+            }
+            .bank-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h4>THE WEDDING OF</h4>
+        <h1>Kaniya</h1>
+        <h1>&</h1>
+        <h1>Wandi</h1>
+
+        <p>31 Mei 2026</p>
+
+        <a href="#couple" class="btn">Buka Undangan</a>
+    </section>
+
+    <!-- COUPLE -->
+    <section class="couple-section" id="couple">
+
+        <p class="subtitle" style="margin-bottom:15px; font-weight:600;">
+            Assalamu'alaikum Warahmatullaahi Wabarakaatuh
+        </p>
+
+        <p class="subtitle">
+            Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.
+        </p>
+
+        <div class="couple-container">
+
+            <div class="couple">
+                <img src="IMG_20260513_133208.jpg.jpeg" alt="Kaniya">
+            </div>
+
+            <div class="couple-content">
+                <h2>Kaniya Listiyani</h2>
+
+                <p>
+                    Putri Pertama dari<br> Kanang & Ibu Heryanti
+                </p>
+            </div>
+
+            <div class="couple">
+                <img src="DSC07585 (2).jpg.jpeg" alt="Wandi">
+
+
+            </div>
+            <div class="couple-content">
+                <h2>Wandi Iskandar</h2>
+
+                <p>
+                    Putra Pertama dari<br> Bpk. Dedi Iskandar Dinata<br> &
+                    <br> Ibu Karsih
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SURAH -->
+    <section class="surah-section">
+
+        <div class="surah-card">
+
+            <img src="16rp Kania&Wandi.jpg.jpeg" alt="Surah">
+
+            <div class="surah-content">
+
+                <h2>QS. Ar-Rum : 21</h2>
+
+                <p class="arabic">
+                    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً
+                </p>
+
+                <p class="arti">
+                    “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa tenteram kepadanya.”
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT -->
+    <section class="event-section">
+
+        <h1 class="title" style="color: white;">Wedding Event</h1>
+
+        <div class="event-wrapper">
+
+            <div class="event-card">
+
+                <i class="fa-solid fa-ring"></i>
+
+                <h3>Akad Nikah</h3>
+
+                <p>Minggu, 31 Mei 2026</p>
+                <p>Pukul 11.00 WIB s/d Selesai</p><br>
+
+                <h2>Rumah Mempelai Wanita</h2>
+
+                <p>
+                    Jl Pondok Lele Perum BIP/BBIP Blok E2 No.05 Desa Dawuan Barat, Kec. Cikampek, Kab. Karawang
+                </p>
+
+                <a href="https://maps.app.goo.gl/6hV9ZsJ9UYdJ4Dhr9" class="btn maps-btn">Buka Maps</a>
+
+            </div>
+
+            <div class="event-card">
+
+                <i class="fa-solid fa-champagne-glasses"></i>
+
+                <h3>Resepsi</h3>
+
+                <p>Minggu, 31 Mei 2026</p>
+                <p>Pukul 11.00 WIB s/d Selesai</p><br>
+
+                <h2>Rumah Mempelai Wanita</h2>
+
+                <p>
+                    Jl Pondok Lele Perum BIP/BBIP Blok E2 No.05 Desa Dawuan Barat, Kec. Cikampek, Kab. Karawang
+                </p>
+                <a href="https://maps.app.goo.gl/6hV9ZsJ9UYdJ4Dhr9" class="btn maps-btn">Buka Maps</a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+
+        <h1 class="title">Galeri</h1>
+
+        <div class="gallery-grid">
+            <img src="DSC07534 (1).JPG (1).jpeg" alt="">
+            <img src="5r DSC07536.jpg.jpeg" alt="">
+            <img src="8rp DSC07551.jpg.jpeg" alt="">
+            <img src="16rp Kania&Wandi.jpg.jpeg" alt="">
+        </div>
+
+    </section>
+
+    <!-- GIFT -->
+    <section class="gift-section">
+
+        <h1 class="title">Wedding Gift</h1>
+
+        <p class="subtitle">
+            Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat memberikan hadiah secara cashless.
+        </p>
+
+        <div class="gift-container">
+
+            <div class="gift-card">
+
+                <div class="bank-header">
+
+                    <h3>Wedding Gift</h3>
+
+                    <img src="https://rankia.id/app/uploads/2024/11/logo-DANA.jpeg" class="bank-logo" alt="DANA">
+
+                </div>
+
+                <p>No. Rekening</p>
+
+                <div class="rekening">083898020760</div>
+
+                <p>Atas Nama</p>
+
+                <h2>WANDI ISKANDAR</h2>
+
+                <button class="copy-btn" onclick="copyRekening('083898020760')">
+                    <i class="fa-regular fa-copy"></i>
+                    Salin No Rekening
+                </button>
+
+            </div>
+
+            <div class="gift-card">
+
+                <div class="bank-header">
+
+                    <h3>Wedding Gift</h3>
+
+                    <img src="https://www.gokerja.id/wp-content/uploads/2023/02/seabank-01.jpg" class="bank-logo" alt="SEABANK">
+
+                </div>
+
+                <p>No. Rekening</p>
+
+                <div class="rekening">901571477404</div>
+
+                <p>Atas Nama</p>
+
+                <h2>KANIYA LISTIYANI</h2>
+
+                <button class="copy-btn" onclick="copyRekening('901571477404')">
+                    <i class="fa-regular fa-copy"></i>
+                    Salin No Rekening
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Kaniya & Wandi</h2>
+        <p>Terima kasih atas doa dan kehadirannya</p>
+    </footer>
+
+    <script>
+        function copyRekening(no) {
+
+            navigator.clipboard.writeText(no)
+                .then(() => {
+                    alert('Nomor rekening berhasil disalin');
+                })
+
+            .catch(() => {
+                alert('Gagal menyalin nomor rekening');
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>
